@@ -43,6 +43,9 @@ import { LiaAngleRightSolid } from "react-icons/lia";
 import { GoDotFill } from "react-icons/go";
 import SectionTitle from "@/components/custom/section-title";
 import Footer from "@/components/custom/footer";
+import OrderCard from "@/components/traveller/order-card";
+
+import { FaMapLocationDot } from "react-icons/fa6";
 
 const frameworks = [
   {
@@ -74,17 +77,17 @@ export default function Travellers() {
   return (
     <>
       <Navigation />
-      <section className="relative h-[80vh] w-full bg-red-500">
+      <section className="relative h-[80vh] w-full ">
         <div className="absolute top-0 left-0 h-full overflow-hidden">
           <img src="/beach-3.jpeg" alt="" />
         </div>
         <div className="h-full w-full absolute z-2 "></div>
-        <div className="relative pt-24 px-24 flex space-x-5 justify-between">
-          <div className="flex-1 pr-14">
-            <h1 className="font-extrabold text-5xl py-3">
+        <div className="relative pt-20 md:pt-24 px-4 md:px-24 flex flex-col md:flex-row space-x-5 justify-between">
+          <div className="flex-1 md:pr-14">
+            <h1 className="font-extrabold text-xl md:text-5xl py-3">
               Earn $200+ USD every time you travel abroad
             </h1>
-            <p className="py-5 text-gray-900 font-medium pr-14">
+            <p className="md:py-5 text-xs md:text-md text-gray-900 font-medium pr-14">
               Deliver products to international shoppers and cut your travel
               costs in half. Deliver products to international shoppers and cut
               your travel costs in half.
@@ -123,7 +126,7 @@ export default function Travellers() {
               </div>
             </div>
           </div>
-          <Card className="w-[450px] h-fit">
+          <Card className="hidden md:block w-[450px] h-fit">
             <CardHeader>
               <CardTitle className="text-2xl">Create new travel plan</CardTitle>
               <CardDescription>
@@ -253,7 +256,7 @@ export default function Travellers() {
         </div>
       </section>
       <main className="relative max-w-7xl mx-auto">
-        <section className="absolute -top-10 px-6 py-6 w-full grid grid-cols-3 gap-5 bg-white shadow-2xl rounded-lg">
+        <section className="md:absolute -top-10 px-6 py-6 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 divide-y md:divide-y-0 bg-white shadow-2xl rounded-lg">
           <div className="flex items-start gap-4">
             <div className=" w-10 h-10 inline-flex justify-center items-center rounded-full bg-blue-500 text-white">
               <BsShieldLockFill />
@@ -275,7 +278,7 @@ export default function Travellers() {
             </div>
           </div>
 
-          <div className="flex items-start gap-4">
+          <div className="flex items-start gap-4 pt-4 md:p-0">
             <div className=" w-10 h-10 inline-flex justify-center items-center rounded-full bg-blue-500 text-white">
               <BsShieldLockFill />
             </div>
@@ -296,7 +299,7 @@ export default function Travellers() {
             </div>
           </div>
 
-          <div className="flex items-start gap-4">
+          <div className="flex items-start gap-4 pt-4 md:p-0">
             <div className=" w-10 h-10 inline-flex justify-center items-center rounded-full bg-blue-500 text-white">
               <BsShieldLockFill />
             </div>
@@ -316,12 +319,14 @@ export default function Travellers() {
             </div>
           </div>
         </section>
+
         <div className="pt-24"></div>
+
         <SectionTitle
           title="Popular Destinations"
           subTitle="Explore popular places"
         />
-        <section className="grid grid-cols-3">
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-3">
           <div className="h-full px-4">
             <div className="overflow-hidden rounded-lg border border-[#e7e7e7] bg-white">
               <div>
@@ -421,88 +426,52 @@ export default function Travellers() {
           subTitle="How to earn money traveling"
         />
         <section className="">
-          <div>
-            <h2 className="sr-only">Steps</h2>
+          <ul className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <li className="flex flex-col items-center gap-4">
+              <FaMapLocationDot className="text-blue-600" size={70} />
+              <div className=" text-gray-800 text-center">
+                <strong className="block text-3xl font-bold">Add trip</strong>
+                <p className="mt-4">
+                  Start by adding your trip to see requested orders along your
+                  route.
+                </p>
+              </div>
+            </li>
+            <li className="flex flex-col items-center gap-4">
+              <FaMapLocationDot className="text-blue-600" size={70} />
+              <div className=" text-gray-800 text-center">
+                <strong className="block text-3xl font-bold">Add trip</strong>
+                <p className="mt-4">
+                  Start by adding your trip to see requested orders along your
+                  route.
+                </p>
+              </div>
+            </li>
+            <li className="flex flex-col items-center gap-4">
+              <FaMapLocationDot className="text-blue-600" size={70} />
+              <div className=" text-gray-800 text-center">
+                <strong className="block text-3xl font-bold">Add trip</strong>
+                <p className="mt-4">
+                  Start by adding your trip to see requested orders along your
+                  route.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
 
-            <div>
-              <ol className="grid grid-cols-1 divide-x divide-gray-100 overflow-hidden rounded-lg border border-gray-100 text-sm text-gray-500 sm:grid-cols-3">
-                <li className="flex items-center justify-center gap-2 p-4">
-                  <svg
-                    className="h-7 w-7 shrink-0"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"
-                    />
-                  </svg>
-
-                  <p className="leading-none">
-                    <strong className="block font-medium"> Details </strong>
-                    <small className="mt-1"> Some info about you. </small>
-                  </p>
-                </li>
-
-                <li className="relative flex items-center justify-center gap-2 bg-gray-50 p-4">
-                  <span className="absolute -left-2 top-1/2 hidden h-4 w-4 -translate-y-1/2 rotate-45 border border-gray-100 ltr:border-b-0 ltr:border-s-0 ltr:bg-white rtl:border-e-0 rtl:border-t-0 rtl:bg-gray-50 sm:block"></span>
-
-                  <span className="absolute -right-2 top-1/2 hidden h-4 w-4 -translate-y-1/2 rotate-45 border border-gray-100 ltr:border-b-0 ltr:border-s-0 ltr:bg-gray-50 rtl:border-e-0 rtl:border-t-0 rtl:bg-white sm:block"></span>
-
-                  <svg
-                    className="h-7 w-7 shrink-0"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    />
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-
-                  <p className="leading-none">
-                    <strong className="block font-medium"> Address </strong>
-                    <small className="mt-1"> Where we sending it? </small>
-                  </p>
-                </li>
-
-                <li className="flex items-center justify-center gap-2 p-4">
-                  <svg
-                    className="h-7 w-7 shrink-0"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
-                    />
-                  </svg>
-
-                  <p className="leading-none">
-                    <strong className="block font-medium"> Payment </strong>
-                    <small className="mt-1"> Show us the money. </small>
-                  </p>
-                </li>
-              </ol>
-            </div>
+        <SectionTitle
+          title="Recent Order Requests"
+          subTitle="Recent Grabs from Around the World"
+        />
+        <section className="flex flex-col gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <OrderCard />
+            <OrderCard />
+            <OrderCard />
+            <OrderCard />
           </div>
+          <Button className="mx-auto h-11 w-32">Show All</Button>
         </section>
       </main>
       <Footer />

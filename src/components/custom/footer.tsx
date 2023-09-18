@@ -45,13 +45,13 @@ export default function Footer() {
                   <li>
                     <a
                       href="javascript:void(0)"
-                      className="hover:underline text-sm font-light transition-all hover:text-white"
+                      className="hover:underline text-sm font-light transition-all"
                     ></a>
                   </li>
                   <li>
                     <a
                       href="javascript:void(0)"
-                      className="hover:underline text-sm font-light transition-all hover:text-white"
+                      className="hover:underline text-sm font-light transition-all"
                     >
                       Washing Machines
                     </a>
@@ -59,7 +59,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="javascript:void(0)"
-                      className="hover:underline text-sm font-light transition-all hover:text-white"
+                      className="hover:underline text-sm font-light transition-all"
                     >
                       Air Conditioners
                     </a>
@@ -67,7 +67,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="javascript:void(0)"
-                      className="hover:underline text-sm font-light transition-all hover:text-white"
+                      className="hover:underline text-sm font-light transition-all"
                     >
                       Laptops
                     </a>
@@ -75,7 +75,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="javascript:void(0)"
-                      className="hover:underline text-sm font-light transition-all hover:text-white"
+                      className="hover:underline text-sm font-light transition-all"
                     >
                       Accessories
                     </a>
@@ -83,7 +83,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="javascript:void(0)"
-                      className="hover:underline text-sm font-light transition-all hover:text-white"
+                      className="hover:underline text-sm font-light transition-all"
                     >
                       Gamming Laptops
                     </a>
@@ -101,7 +101,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="javascript:void(0)"
-                      className="hover:underline text-sm font-light transition-all hover:text-white"
+                      className="hover:underline text-sm font-light transition-all"
                     >
                       About us
                     </a>
@@ -109,7 +109,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="javascript:void(0)"
-                      className="hover:underline text-sm font-light transition-all hover:text-white"
+                      className="hover:underline text-sm font-light transition-all"
                     >
                       Contact Us
                     </a>
@@ -117,7 +117,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="javascript:void(0)"
-                      className="hover:underline text-sm font-light transition-all hover:text-white"
+                      className="hover:underline text-sm font-light transition-all"
                     >
                       Faq
                     </a>
@@ -125,7 +125,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="javascript:void(0)"
-                      className="hover:underline text-sm font-light transition-all hover:text-white"
+                      className="hover:underline text-sm font-light transition-all"
                     >
                       Latest Posts
                     </a>
@@ -133,7 +133,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="javascript:void(0)"
-                      className="hover:underline text-sm font-light transition-all hover:text-white"
+                      className="hover:underline text-sm font-light transition-all"
                     >
                       Order Track
                     </a>

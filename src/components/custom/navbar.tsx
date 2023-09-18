@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { BsGithub, BsGoogle, BsApple } from "react-icons/bs";
 
 import { cn } from "@/lib/utils";
 import {
@@ -15,6 +16,18 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Button } from "../ui/button";
 import Image from "next/image";
+import { ProfileButton } from "./profile-button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -43,6 +56,11 @@ const components: { title: string; href: string; description: string }[] = [
 ];
 
 export function Navigation() {
+  const [isAuth, setIsAuth] = React.useState(false);
+
+  const auth = () => {
+    setIsAuth(true);
+  };
   return (
     <header className="w-full bg-white flex justify-between items-center px-24 py-3.5 fixed z-10 border-b">
       <NavigationMenu>
@@ -107,10 +125,53 @@ export function Navigation() {
         </NavigationMenuList>
       </NavigationMenu>
 
-      <div className="flex items-center border rounded-md">
-        <Button variant={"link"}>Login</Button>/
-        <Button variant={"link"}>Register</Button>
-      </div>
+      {!isAuth ? (
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button
+              variant="outline"
+              className="text-blue-600 hover:text-blue-700"
+            >
+              Sign in
+            </Button>
+          </DialogTrigger>
+          <DialogContent className="sm:max-w-[425px]">
+            <DialogHeader>
+              <DialogTitle className="text-3xl font-extrabold">
+                Sign in
+              </DialogTitle>
+              <DialogDescription>
+                Sign in with your google, apple, github account.
+              </DialogDescription>
+            </DialogHeader>
+            <div className="grid gap-4 py-4">
+              <Button
+                onClick={auth}
+                variant="outline"
+                className="inline-flex gap-2 h-11"
+              >
+                <BsGoogle /> Continute with Goggle
+              </Button>
+              <Button
+                onClick={auth}
+                variant="outline"
+                className="inline-flex gap-2 h-11"
+              >
+                <BsApple /> Continute with Apple
+              </Button>
+              <Button
+                onClick={auth}
+                variant="outline"
+                className="inline-flex gap-2 h-11"
+              >
+                <BsGithub /> Continute with Github
+              </Button>
+            </div>
+          </DialogContent>
+        </Dialog>
+      ) : (
+        <ProfileButton />
+      )}
     </header>
   );
 }
